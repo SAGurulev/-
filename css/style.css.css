@@ -1115,3 +1115,14 @@ padding-left: 20px;
 .js-menu-link {
     display: none;
 }
+@media (max-width: 640px), (orientation: landscape) {
+    .post-foto {
+        width 50%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px), (orientation: landscape) {
+.post-foto {
+    width: calc(25% - 2px);
+}
+}
