@@ -1119,7 +1119,7 @@ padding-left: 20px;
     background-size: cover;
     background-color: transparent;
 }
-.js-menu-link {
+/*.js-menu-link {*/
     display: none;
 }
 @media (max-width: 640px) and (orientation: landscape) {
