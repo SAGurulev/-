@@ -19,7 +19,7 @@ option {
 }
 a {
     text-decoration: none;
-    color: #b59f5b;
+    color: inherit;
 }
 h1 {
     margin-block-start: 0;
@@ -47,7 +47,9 @@ button:hover {
     cursor: pointer;
     color: black;
 }
-
+.button:hover {
+    background-color: black;
+}
 .welcome-title {
     text-transform: uppercase;
     color: #ffffff;
@@ -72,6 +74,10 @@ button:hover {
 .link {
     text-decoration: none;
     color: #ffffff;
+}
+.link:hover {
+    text-decoration: underline;
+    color: inherit;
 }
 
 .postis {
@@ -173,6 +179,9 @@ button:hover {
     text-decoration: none;
     color: #b59f5b;
 }
+.teg:hover {
+    text-decoration: underline;
+}
 
 .section {
     width: 500px;
@@ -254,7 +263,7 @@ button:hover {
     box-sizing: border-box;
     display: block;
     padding-left: 18px;
-    width: calc(200px - 40px);
+    width: 100%;
     height: 46px;
     background-color: #f4f7f6;
     border: none;
@@ -275,15 +284,20 @@ button:hover {
 .button {
     background-color: #b59f5b;
     cursor: pointer;
-    width: 100%;
+    width: 46px;
     height: 46px;
     background-image: url(../svg/search.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20px;
-    vertical-align: center;
+    vertical-align: middle;
     position: relative;
     border: none;
+    flex-grow: 0;
+    display: flex;
+}
+.search-article {
+    width: 100%;
 }
 .button-submit {
     background-color: #b59f5b;
@@ -293,7 +307,7 @@ button:hover {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20px;
-    vertical-align: center;
+    vertical-align: middle;
     position: relative;
     border: none;
     text-transform: uppercase;
@@ -412,11 +426,16 @@ button:hover {
     padding-top: 0;
     list-style-type: none;
 }
+.slogans-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 .slogans-link:after {
     content: "";
     display: block;
     background-color: #eeeeee;
     height: 1px;
+    margin-top: 20px;
 
 }
 
@@ -655,6 +674,12 @@ button:hover {
 .goods1 {
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 30px;
+}
+.img-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%
 }
 @media (max-width: 640px) {
     .header {
@@ -667,11 +692,6 @@ button:hover {
         background-color: #000000;
         margin: auto;
         padding-top: 28px;
-    }
-    .img-footer {
-padding-left: 20px;
-        padding-right: 20px;
-        width: 100%
     }
     .headline {
         display: block;
@@ -760,7 +780,6 @@ padding-left: 20px;
     }
 }
 .post-mobile-menu {
-    margin-top: 38px;
     background-color: #ffffff;
     margin-left: auto;
     margin-right: auto;
@@ -784,7 +803,6 @@ padding-left: 20px;
     font-weight: 700;
     text-transform: uppercase;
     margin: auto;
-    margin-bottom: 22px;
     position: relative;
 }
 .textarea {
@@ -907,6 +925,7 @@ padding-left: 20px;
 }
 .shop:hover {
     color: #ffffff;
+    background-color: black;
 }
 .sale-price-combo {
     display: flex;
@@ -1006,17 +1025,20 @@ padding-left: 20px;
     .post-foto:nth-child(-n+3) {
         margin-right: 2px;
     }
-    .goods {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 64px;
-    }
     .js-menu {
         display: none;
     }
     .article-footer:nth-child(-n+2) {
         margin-right: 65px;
     }
+    .goods {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 64px;
+    }
+    }
+.goods {
+    margin-top: 29px;
 }
 .js-menu-link {
     width: 100%;
@@ -1045,10 +1067,11 @@ padding-left: 20px;
 .js-menu-box {
     background-color: #ffffff;
     width: 400px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     position: relative;
     z-index: 999;
+    padding-top: 35px;
+    padding-bottom: 53px;
 }
 .question {
     margin-top: 20px;
@@ -1119,8 +1142,14 @@ padding-left: 20px;
     background-size: cover;
     background-color: transparent;
 }
-/*.js-menu-link {*/
+.js-menu-link {
     display: none;
+}
+.link-footer {
+    color: #b59f5b;
+}
+.link-footer:hover {
+    text-decoration: underline;
 }
 @media (max-width: 640px) and (orientation: landscape) {
     .post-foto {
