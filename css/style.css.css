@@ -1142,7 +1142,7 @@ button:hover {
     background-size: cover;
     background-color: transparent;
 }
-.js-menu-link {
+/*.js-menu-link {*/
     display: none;
 }
 .link-footer {
